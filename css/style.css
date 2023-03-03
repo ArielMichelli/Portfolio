@@ -10,6 +10,7 @@
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 li {
@@ -264,41 +265,110 @@ h2 {
 }
 
 /*==========PROYECTOS============*/
-.proyectos {
-    background-color: white;
-}
 
 .contenedor__proyectos {
-    max-width: 1400px;
+    max-width: 1800px;
     display: flex;
     flex-wrap: wrap;
     margin: 5px auto;
     gap: 20px;
     padding: 20px;
     place-content: center;
+    z-index: -5;
 }
 
-.tarjeta__proyectos {
-    width: 400px;
-    height: 300px;
-    box-shadow: 1px 5px 7px black;
+.tarjeta__proyectos:hover .overlay {
+    opacity: 1;
 }
 
-.tarjeta__proyectos__titulo {
-    text-align: center;
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.text a {
+    text-decoration: none;
+    color: white;
     font-size: 1.5rem;
-    height: 10%;
+    transition-duration: .6s;
 }
 
-.tarjeta__proyectos__img {
-    width: 100%;
-    height: 90%;
+.text a:hover {
+    font-size: 1.8rem;
+    text-decoration: underline;
 }
 
-.tarjeta__proyectos__img img {
+.container {
+    position: relative;
+    width: 400px;
+}
+
+.image {
+    display: block;
     width: 100%;
     height: 100%;
 }
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .7s ease;
+    background-color: #0792c0c7;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    height: fit-content;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.tecnologias {
+    display: flex;
+
+    margin: 10px;
+    top: 70%;
+    left: 50%;
+    gap: 5px;
+}
+
+.tecnologias p {
+    font-size: 1.1rem;
+    padding: 3px 7px;
+    border: solid 2px white;
+    border-radius: 30px;
+}
+
+.tecnologias p:hover {
+    background-color: white;
+    color: blue;
+}
+
 
 /*==========CONTACTO============*/
 .contacto {
@@ -325,7 +395,7 @@ h2 {
 }
 
 /* FOOTER */
-.copy{
+.copy {
     font-size: 0.8rem;
     text-align: center;
     color: white;
